@@ -11,7 +11,7 @@ public class FVCalc {
 
 		//System.out.println("enter the annual interest rate");
 	    int rate = Integer.parseInt(args[1]);
-		double doubleRate = (double)rate;
+		double doubleRate = (double)(rate/100);
 
 		//System.out.println("enter the number of years of investing");
 	    int numOfYears = Integer.parseInt(args[2]);
