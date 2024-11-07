@@ -10,15 +10,14 @@ public class FVCalc {
 	    int currentValue = Integer.parseInt(args[0]);
 
 		//System.out.println("enter the annual interest rate");
-	    int rate = Integer.parseInt(args[1]);
-		double doubleRate = ((double) rate)/ 100;
+	    double rate = Double.parseDouble(args[1])/100;
 
 		//System.out.println("enter the number of years of investing");
 	    int numOfYears = Integer.parseInt(args[2]);
 
-		double futureValue = currentValue * Math.pow((1 + doubleRate), numOfYears);
+		double futureValue = currentValue * Math.pow((1 + rate), numOfYears);
 
-		System.out.println("After "+ numOfYears + " years, a $" + currentValue + " saved at " +(double) rate + "% will yield $" +(int) futureValue);
+		System.out.println("After "+ numOfYears + " years, a $" + currentValue + " saved at " +(double) rate*100 + "% will yield $" +(int) futureValue);
 		
 	}
 }
